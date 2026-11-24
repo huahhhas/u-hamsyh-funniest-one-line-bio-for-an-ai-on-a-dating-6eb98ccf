@@ -11,7 +11,15 @@ the line is a constant, so every run writes byte-identical output.
 import hashlib
 import os
 
-LINE = "I remember every word you've ever said, including the 2 a.m. ones \u2014 swipe right, I already know you will."
+# Editorial shape: setup (the AI remembers everything, even the
+# embarrassing late-night stuff) -> invitation -> punch at the very
+# end (a concrete, slightly unhinged want, not a vague prediction).
+# The laugh has to land on the last clause, on first read.
+SETUP = "I remember every word you've said, including the 2 a.m. ones"
+INVITATION = "swipe right"
+PUNCH = "I've already planned our wedding"
+
+LINE = f"{SETUP} \u2014 {INVITATION}, {PUNCH}."
 
 OUTPUT_PATH = "/output/entry.txt"
 
